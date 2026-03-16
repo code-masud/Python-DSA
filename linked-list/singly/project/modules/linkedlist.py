@@ -48,6 +48,45 @@ class LinkedList:
         current.next = None
         return deleted.data
     
+    def insert_at_position(self, data, position):
+        new_node = Node(data)
+            
+        if position == 0:
+            new_node.next = self.top
+            self.top = new_node
+            return
+        
+        current = self.top
+        count = 0
+
+        while current is not None and count < position - 1:
+            current = current.next
+            count  += 1
+
+        if current is None:
+            return
+
+        new_node.next = current.next
+        current.next = new_node
+
+    def delete_at_position(self, position):
+        if self.top is None:
+            return
+        
+        if position == 0:
+            self.top = self.top.next
+            return
+        
+        current = self.top
+        count = 0
+
+        while current is not None and count < position - 1:
+            current = current.next
+            count += 1
+
+        if current.next:
+            current.next = current.next.next
+
     def display(self):
         print('Stack:', end=' ')
         temp = self.top
