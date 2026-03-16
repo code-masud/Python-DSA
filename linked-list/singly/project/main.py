@@ -4,13 +4,13 @@ def main():
     l = LinkedList()
 
     l.insert_at_top('A')
-    # l.insert_at_top('B')
+    l.insert_at_top('B')
 
     l.display()
 
-    # l.insert_at_end('C')
-    # l.insert_at_end('D')
-    # l.display()
+    l.delete_at_position(1)
+    # l.insert_at_position('D', 0)
+    l.display()
 
     # l.delete_from_top()
     # l.delete_from_top()
@@ -26,10 +26,10 @@ def main():
     # l.delete_from_end()
 
     # l.display()
-    l.delete_from_top()
+    # l.delete_from_top()
     # l.delete_from_top()
     # l.delete_from_end()
-    l.display()
+    # l.display()
 
 if __name__ == '__main__':
     main()
