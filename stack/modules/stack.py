@@ -22,4 +22,4 @@ class Stack:
         return len(self.stack)
 
     def __str__(self):
-        return ' -> '.join(self.stack)
+        return ' -> '.join(self.stack[::-1])

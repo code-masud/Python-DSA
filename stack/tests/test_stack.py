@@ -39,7 +39,7 @@ class TestStack(unittest.TestCase):
         s.push("A")
         s.push("B")
         s.push("C")
-        self.assertEqual(str(s), 'A -> B -> C')
+        self.assertEqual(str(s), 'C -> B -> A')
 
 
 if __name__ == '__main__':
